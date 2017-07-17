@@ -204,7 +204,7 @@ export default {
             badgeColor: ''
           }, {
             title: 'Media Lists',
-            link: '#',
+            link: '/mediaLists/',
             badge: '',
             badgeColor: ''
           }, {

@@ -90,5 +90,9 @@ export default [
   {
     path: '/loginScreen/loginScreenEmbedded/',
     component: require('./pages/loginScreen/loginScreenEmbedded.vue')
+  },
+  {
+    path: '/mediaLists/',
+    component: require('./pages/mediaList.vue')
   }
 ]
