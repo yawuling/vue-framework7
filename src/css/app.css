@@ -1,3 +1,9 @@
 /* =========
 Your custom styles go here
  ========= */
+html.ios-gt-8 .contacts-block .list-group-title{
+  font-weight: 500;
+}
+html.ios-gt-8 .list-block.media-list .item-title{
+  font-weight: 500;
+}

@@ -1,6 +1,6 @@
-<template lang="html">
+<template>
   <f7-page>
-    <f7-navbar title="Autocomplete" back-link="返回">
+    <f7-navbar title="Autocomplete" back-link="返回" sliding>
       <f7-nav-right>
         <f7-link icon="icon icon-bars" open-panel="left"></f7-link>
       </f7-nav-right>
@@ -71,7 +71,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       fruits: ('Apple Apricot Avocado Banana Melon Orange Peach Pear Pineapple').split(' '),
       standaloneFruit: '',
@@ -296,5 +296,5 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="less">
 </style>

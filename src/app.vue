@@ -32,7 +32,7 @@
 
     <!-- Main Views -->
     <f7-views>
-      <f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
+      <f7-view id="main-view" navbar-through toolbar-through :dynamic-navbar="true" main>
         <!-- iOS Theme Navbar -->
         <f7-navbar v-if="$theme.ios">
           <f7-nav-center sliding>Framework7</f7-nav-center>
@@ -50,6 +50,11 @@
                 <f7-link icon="icon-bars" open-panel="right"></f7-link>
               </f7-nav-right>
             </f7-navbar>
+            <!-- Material Theme Toolbar -->
+            <f7-toolbar v-if="$theme.material">
+              <f7-link>Dummy Link</f7-link>
+              <f7-link>Menu</f7-link>
+            </f7-toolbar>
             <!-- Page Content -->
             <f7-block-title>Welcome to Framework7</f7-block-title>
             <f7-block>
@@ -67,6 +72,11 @@
             </f7-list>
           </f7-page>
         </f7-pages>
+        <!-- IOS Theme Toolbar -->
+        <f7-toolbar v-if="$theme.ios">
+          <f7-link>Dummy Link</f7-link>
+          <f7-link>Menu</f7-link>
+        </f7-toolbar>
       </f7-view>
     </f7-views>
 
@@ -91,34 +101,34 @@
       <f7-view>
         <f7-pages>
           <f7-page login-screen>
-            <f7-login-screen-title>Login</f7-login-screen-title>
+            <f7-login-screen-title>Framework7</f7-login-screen-title>
             <f7-list form>
               <f7-list-item>
                 <f7-label>Username</f7-label>
-                <f7-input name="username" placeholder="Username" type="text"></f7-input>
+                <f7-input name="username" placeholder="Your username" type="text" v-model="username"></f7-input>
               </f7-list-item>
               <f7-list-item>
                 <f7-label>Password</f7-label>
-                <f7-input name="password" type="password" placeholder="Password"></f7-input>
+                <f7-input name="password" type="password" placeholder="Your password" v-model="password"></f7-input>
               </f7-list-item>
             </f7-list>
             <f7-list>
-              <f7-list-button title="Sign In" close-login-screen></f7-list-button>
+              <f7-list-button title="Sign In" @click="closeLogin"></f7-list-button>
               <f7-list-label>
-                <p>Click Sign In to close Login Screen</p>
+                <div>Some text about login information.</div>
+                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
               </f7-list-label>
             </f7-list>
           </f7-page>
         </f7-pages>
       </f7-view>
     </f7-login-screen>
-
   </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       lists: [
         [
@@ -134,67 +144,62 @@ export default {
             badgeColor: ''
           }, {
             title: 'Calendar/Datepicker',
-            link: '#',
+            link: '/calendarDatepicker/',
             badge: '',
             badgeColor: ''
           }, {
             title: 'Cards',
-            link: '#',
+            link: '/cards/',
             badge: '',
             badgeColor: ''
           }, {
             title: 'Chips/Tags',
-            link: '#',
+            link: '/chipsTags/',
             badge: '',
             badgeColor: ''
           }, {
             title: 'Contacts List',
-            link: '#',
+            link: '/contacts/',
             badge: '',
             badgeColor: ''
           }, {
-            title: 'Data Tables',
-            link: '#',
-            badge: 'NEW',
-            badgeColor: 'green'
-          }, {
             title: 'Floating Action Button',
-            link: '#',
+            link: '/floatingAction/',
             badge: '',
             badgeColor: ''
           }, {
             title: 'Forms',
-            link: '#',
+            link: '/forms/',
             badge: '',
             badgeColor: ''
           }, {
             title: 'Grids',
-            link: '#',
+            link: '/grids/',
             badge: '',
             badgeColor: ''
           }, {
             title: 'Icons',
-            link: '#',
+            link: '/icons/',
             badge: '258',
             badgeColor: 'green'
           }, {
             title: 'Infinite Scroll',
-            link: '#',
+            link: '/infiniteScroll/',
             badge: '',
             badgeColor: ''
           }, {
             title: 'Lazy Load Images',
-            link: '#',
+            link: '/lazyLoadImages/',
             badge: '',
             badgeColor: ''
           }, {
             title: 'List View',
-            link: '#',
+            link: '/listView/',
             badge: '',
             badgeColor: ''
           }, {
             title: 'Login Screen',
-            link: '#',
+            link: '/loginScreen/',
             badge: '',
             badgeColor: ''
           }, {
@@ -325,7 +330,17 @@ export default {
             badgeColor: ''
           }
         ]
-      ]
+      ],
+      username: '',
+      password: ''
+    }
+  },
+  methods: {
+    closeLogin: function () {
+      let loginText = 'Username:' + this.username + ',password:' + this.password
+      this.$f7.alert(loginText, 'Framework7', function () {
+        window.f7.closeModal('#login-screen')
+      })
     }
   }
 }
