@@ -1,11 +1,11 @@
 <template>
   <f7-page>
-    <f7-navbar title="Media Lists" back-link="返回">
+    <f7-navbar title="Media Lists" back-link="Back" sliding>
       <f7-nav-right>
         <f7-link icon="icon icon-bars" open-panel="left"></f7-link>
       </f7-nav-right>
     </f7-navbar>
-    <f7-block>Media Lists are almost the same as Data Lists, but with a more flexible layout for visualization of more complex data, like products, services, userc, etc. You can even use them in <f7-link>popovers</f7-link></f7-block>
+    <f7-block>Media Lists are almost the same as Data Lists, but with a more flexible layout for visualization of more complex data, like products, services, userc, etc. You can even use them in <f7-link open-popover>popovers</f7-link></f7-block>
     <f7-block-title>SONGS</f7-block-title>
     <f7-list media-list>
       <f7-list-item v-for="item in songs"
@@ -55,6 +55,17 @@
         :subtitle="item.subtitle"
       ></f7-list-item>
     </f7-list>
+
+    <f7-popover>
+      <f7-list media-list>
+        <f7-list-item v-for="item in popovers"
+          :link="item.link"
+          :media="item.media"
+          :title="item.title"
+          :subtitle="item.subtitle"
+        ></f7-list-item>
+      </f7-list>
+    </f7-popover>
   </f7-page>
 </template>
 
@@ -148,12 +159,38 @@ export default {
           title: 'Billie Jean',
           subtitle: 'Michael Jackson',
         }
+      ],
+      popovers: [
+        {
+          link: '#',
+          media: '<img src="./static/image/photo1.jpg" width="44"/>',
+          title: 'Yellow Submarine',
+          subtitle: 'Beatles',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.',
+          after: '$15'
+        }, {
+          link: '#',
+          media: '<img src="./static/image/photo11.jpg" width="44" />',
+          title: 'Don\'t Stop Me Now',
+          subtitle: 'Queen',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.',
+          after: '$22'
+        }, {
+          link: '#',
+          media: '<img src="./static/image/photo6.jpg" width="44" />',
+          title: 'Billie Jean',
+          subtitle: 'Michael Jackson',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sagittis tellus ut turpis condimentum, ut dignissim lacus tincidunt. Cras dolor metus, ultrices condimentum sodales sit amet, pharetra sodales eros. Phasellus vel felis tellus. Mauris rutrum ligula nec dapibus feugiat. In vel dui laoreet, commodo augue id, pulvinar lacus.',
+          after: '$16'
+        }
       ]
     }
   }
 }
 </script>
 
-<style lang="less">
-
+<style lang="less" scoped>
+.popover{
+  width: 240px;
+}
 </style>

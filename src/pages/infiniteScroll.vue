@@ -1,6 +1,6 @@
 <template>
   <f7-page infinite-scroll @infinite="onInfiniteScroll">
-    <f7-navbar title="Infinite Scroll" back-link="返回" sliding>
+    <f7-navbar title="Infinite Scroll" back-link="Back" sliding>
       <f7-nav-right>
         <f7-link icon="icon icon-bars" open-panel="left"></f7-link>
       </f7-nav-right>
@@ -29,18 +29,18 @@ export default {
 
       this.loading = true;
 
-      let _this = this;
+      let self = this;
 
       setTimeout(function () {
-        _this.loading = false;
+        self.loading = false;
 
-        if (_this.items >= _this.maxLength) {
-          _this.$f7.detachInfiniteScroll(_this.$$('.infinite-scroll'))
-          _this.$$('.infinite-scroll-preloader').remove()
+        if (self.items >= self.maxLength) {
+          self.$f7.detachInfiniteScroll(self.$$('.infinite-scroll'))
+          self.$$('.infinite-scroll-preloader').remove()
           return
         }
 
-        _this.items += 20;
+        self.items += 20;
       }, 1000)
     }
   }

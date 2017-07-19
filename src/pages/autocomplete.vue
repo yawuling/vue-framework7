@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Autocomplete" back-link="返回" sliding>
+    <f7-navbar title="Autocomplete" back-link="Back" sliding>
       <f7-nav-right>
         <f7-link icon="icon icon-bars" open-panel="left"></f7-link>
       </f7-nav-right>
@@ -82,8 +82,8 @@ export default {
     }
   },
   mounted() {
-    let _this = this;
-    let fruits = _this.fruits
+    let self = this;
+    let fruits = self.fruits
     let autocompleteDropdownSimple = this.$f7.autocomplete({
       input: '#autocomplete-dropdown',
       openIn: 'dropdown',
@@ -166,7 +166,7 @@ export default {
           return
         }
         autocomplete.showPreloader()
-        _this.$$.ajax({
+        self.$$.ajax({
           url: '/static/data/autocomplete-languages.json',
           method: 'GET',
           dataType: 'json',
@@ -187,7 +187,7 @@ export default {
     })
     let autocompleteStandaloneSimple = this.$f7.autocomplete({
       openIn: 'page',
-      opener: _this.$$('#autocomplete-standalone'),
+      opener: self.$$('#autocomplete-standalone'),
       backOnSelect: true,
       source: function (autocomplete, query, render) {
         let results = []
@@ -203,12 +203,12 @@ export default {
         render(results)
       },
       onChange: function (autocomplete, value) {
-        _this.standaloneFruit = value[0]
+        self.standaloneFruit = value[0]
       }
     })
     let autocompleteStandalonePopup = this.$f7.autocomplete({
       openIn: 'popup',
-      opener: _this.$$('#autocomplete-popup'),
+      opener: self.$$('#autocomplete-popup'),
       backOnSelect: true,
       source: function (autocomplete, query, render) {
         let results = []
@@ -224,12 +224,12 @@ export default {
         render(results)
       },
       onChange: function (autocomplete, value) {
-        _this.popupFruit = value[0]
+        self.popupFruit = value[0]
       }
     })
     let autocompleteStandaloneMulti = this.$f7.autocomplete({
       openIn: 'page',
-      opener: _this.$$('#autocomplete-multiple'),
+      opener: self.$$('#autocomplete-multiple'),
       multiple: true,
       source: function (autocomplete, query, render) {
         let results = []
@@ -245,12 +245,12 @@ export default {
         render(results)
       },
       onChange: function (autocomplete, value) {
-        _this.multiFruit = value.join(', ')
+        self.multiFruit = value.join(', ')
       }
     })
     let autocompleteStandaloneAjax = this.$f7.autocomplete({
       openIn: 'page',
-      opener: _this.$$('#autocomplete-standalone-ajax'),
+      opener: self.$$('#autocomplete-standalone-ajax'),
       multiple: true,
       valueProperty: 'id',
       textProperty: 'name',
@@ -263,7 +263,7 @@ export default {
           return
         }
         autocomplete.showPreloader()
-        _this.$$.ajax({
+        self.$$.ajax({
           url: '/static/data/autocomplete-languages.json',
           method: 'GET',
           dataType: 'json',
@@ -288,8 +288,8 @@ export default {
           itemText.push(value[i].name)
           inputValue.push(value[i].id)
         }
-        _this.ajaxLanguageTitle = itemText.join(', ')
-        _this.ajaxLanguage = inputValue.join(', ')
+        self.ajaxLanguageTitle = itemText.join(', ')
+        self.ajaxLanguage = inputValue.join(', ')
       }
     })
   }

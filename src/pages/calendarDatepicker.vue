@@ -1,12 +1,18 @@
 <template>
   <f7-page>
-    <f7-navbar title="Calendar/Datepicker" back-link="返回" sliding>
+    <f7-navbar title="Calendar" back-link="Back" sliding>
       <f7-nav-right>
         <f7-link icon="icon icon-bars" open-panel="left"></f7-link>
       </f7-nav-right>
     </f7-navbar>
-    <f7-block>Calendar is a touch optimized component that provides an easy way to handle dates.</f7-block>
-    <f7-block>Calendar could be used as inline component or as overlay. Overlay Calendar will be automatically converted to Popover on tablets (iPad).</f7-block>
+    <f7-block>
+      <p>
+        Calendar is a touch optimized component that provides an easy way to handle dates.
+      </p>
+      <p>
+        Calendar could be used as inline component or as overlay. Overlay Calendar will be automatically converted to Popover on tablets (iPad).
+      </p>
+    </f7-block>
     <f7-block-title>DEFAULT SETUP</f7-block-title>
     <f7-list form>
       <f7-list-item>
@@ -25,7 +31,7 @@
         <f7-input type="text" placeholder="Select multiple dates" readonly id="calendar-multiple"></f7-input>
       </f7-list-item>
     </f7-list>
-    <f7-block-title>RANGE PICKER</f7-block-title>
+    <f7-block-title>RANGE PICKER <f7-badge color="green">NEW</f7-badge></f7-block-title>
     <f7-list form>
       <f7-list-item>
         <f7-input type="text" placeholder="Select date range" readonly id="calendar-range"></f7-input>
@@ -127,7 +133,6 @@ export default {
 
 <style lang="less" scoped>
 .content-block{
-  padding: 0;
 
   .content-block-inner{
     padding-top: 0;

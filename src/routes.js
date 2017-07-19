@@ -1,98 +1,161 @@
 export default [
   {
+    path: '/',
+    component: require('./pages/mainPage.vue')
+  }, {
     path: '/about/',
     component: require('./pages/about.vue')
-  },
-  {
+  }, {
     path: '/accordion/',
     component: require('./pages/accordion.vue')
-  },
-  {
+  }, {
     path: '/autocomplete/',
     component: require('./pages/autocomplete.vue')
-  },
-  {
+  }, {
     path: '/calendarDatepicker/',
     component: require('./pages/calendarDatepicker.vue')
-  },
-  {
+  }, {
     path: '/cards/',
     component: require('./pages/cards.vue')
-  },
-  {
+  }, {
     path: '/chipsTags/',
     component: require('./pages/chipsTags.vue')
-  },
-  {
+  }, {
     path: '/contacts/',
     component: require('./pages/contacts.vue')
-  },
-  {
+  }, {
     path: '/floatingAction/',
     component: require('./pages/floatingAction/floatingAction.vue'),
-  },
-  {
+  }, {
     path: '/floatingAction/staticFloating/',
     component: require('./pages/floatingAction/staticFloating.vue')
-  },
-  {
+  }, {
     path: '/floatingAction/speedDial/',
     component: require('./pages/floatingAction/speedDial.vue')
-  },
-  {
+  }, {
     path: '/forms/',
     component: require('./pages/forms/forms.vue')
-  },
-  {
+  }, {
     path: '/forms/formElements/',
     component: require('./pages/forms/formElements.vue')
-  },
-  {
+  }, {
     path: '/forms/checkboxesAndRadios/',
     component: require('./pages/forms/checkboxesAndRadios.vue')
-  },
-  {
+  }, {
     path: '/forms/smartSelects/',
     component: require('./pages/forms/smartSelects.vue')
-  },
-  {
+  }, {
     path: '/forms/buttons/',
     component: require('./pages/forms/buttons.vue')
-  },
-  {
+  }, {
     path: '/forms/formStorage/',
     component: require('./pages/forms/formStorage.vue')
-  },
-  {
-    path: '/grids/',
-    component: require('./pages/grids.vue')
-  },
-  {
+  }, {
+    path: '/grid/',
+    component: require('./pages/grid.vue')
+  }, {
     path: '/icons/',
     component: require('./pages/icons.vue')
-  },
-  {
+  }, {
     path: '/infiniteScroll/',
     component: require('./pages/infiniteScroll.vue')
-  },
-  {
+  }, {
     path: '/lazyLoadImages/',
     component: require('./pages/lazyLoadImages.vue')
-  },
-  {
+  }, {
     path: '/listView/',
     component: require('./pages/listView.vue')
-  },
-  {
+  }, {
     path: '/loginScreen/',
     component: require('./pages/loginScreen/loginScreen.vue')
-  },
-  {
+  }, {
     path: '/loginScreen/loginScreenEmbedded/',
     component: require('./pages/loginScreen/loginScreenEmbedded.vue')
-  },
-  {
+  }, {
     path: '/mediaLists/',
     component: require('./pages/mediaList.vue')
+  }, {
+    path: '/messages/',
+    component: require('./pages/messages.vue')
+  }, {
+    path: '/modals/',
+    component: require('./pages/modals.vue')
+  }, {
+    path: '/navbarsAndToolbars/',
+    component: require('./pages/navbarsAndToolbars/navbarsAndToolbars.vue')
+  }, {
+    path: '/navbarsAndToolbars/deepNavbar/',
+    component: require('./pages/navbarsAndToolbars/deepNavbar.vue')
+  }, {
+    path: '/navbarsAndToolbars/deepNavbar/deep2/',
+    component: require('./pages/navbarsAndToolbars/deep2.vue')
+  }, {
+    path: '/navbarsAndToolbars/deepNavbar/deep2/deep3/',
+    component: require('./pages/navbarsAndToolbars/deep3.vue')
+  }, {
+    path: '/navbarsAndToolbars/hide/',
+    component: require('./pages/navbarsAndToolbars/hide.vue')
+  }, {
+    path: '/navbarsAndToolbars/hide/hideNavbar/',
+    component: require('./pages/navbarsAndToolbars/hideNavbar.vue')
+  }, {
+    path: '/navbarsAndToolbars/hide/hideToolbar/',
+    component: require('./pages/navbarsAndToolbars/hideToolbar.vue')
+  }, {
+    path: '/navbarsAndToolbars/hide/hideBoth/',
+    component: require('./pages/navbarsAndToolbars/hideBoth.vue')
+  }, {
+    path: '/navbarsAndToolbars/tabbar/',
+    component: require('./pages/navbarsAndToolbars/tabbar.vue'),
+    tabs: [
+      {
+        path: '/',
+        tabId: 'tab1',
+        component: require('./pages/navbarsAndToolbars/tab1.vue')
+      }, {
+        path: '/tab2/',
+        tabId: 'tab2',
+        component: require('./pages/navbarsAndToolbars/tab2.vue')
+      }, {
+        path: '/tab3/',
+        tabId: 'tab3',
+        component: require('./pages/navbarsAndToolbars/tab3.vue')
+      }, {
+        path: '/tab4/',
+        tabId: 'tab4',
+        component: require('./pages/navbarsAndToolbars/tab4.vue')
+      }
+    ]
+  }, {
+    path: '/navbarsAndToolbars/tabbarWithLabel/',
+    component: require('./pages/navbarsAndToolbars/tabbarWithLabel.vue'),
+    tabs: [
+      {
+        path: '/',
+        tabId: 'tab1',
+        component: require('./pages/navbarsAndToolbars/tab1.vue')
+      }, {
+        path: '/tab2/',
+        tabId: 'tab2',
+        component: require('./pages/navbarsAndToolbars/tab2.vue')
+      }, {
+        path: '/tab3/',
+        tabId: 'tab3',
+        component: require('./pages/navbarsAndToolbars/tab3.vue')
+      }, {
+        path: '/tab4/',
+        tabId: 'tab4',
+        component: require('./pages/navbarsAndToolbars/tab4.vue')
+      }
+    ]
+  }, {
+    path: '/navbarsAndToolbars/diffScrollTabbar/',
+    component: require('./pages/navbarsAndToolbars/diffScrollTabbar.vue')
+  }, {
+    path: '/navbarsAndToolbars/hideBarsOnScroll/',
+    component: require('./pages/navbarsAndToolbars/hideBarsOnScroll.vue')
+  }, {
+    path: '/navbarsAndToolbars/subNavbar/',
+    component: require('./pages/navbarsAndToolbars/subNavbar.vue')
   }
 ]

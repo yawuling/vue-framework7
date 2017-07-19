@@ -7,7 +7,7 @@
     </f7-navbar>
     <f7-block>Framework7 allows you to easily convert your usual form selects to dynamic pages with radios:</f7-block>
     <f7-list form>
-      <f7-list-item smart-select title="Fruit" smart-select-back-text="返回">
+      <f7-list-item smart-select title="Fruit" smart-select-back-text="Back">
         <select name="fruits">
           <option value="apple" selected>Apple</option>
           <option value="pineapple">Pineapple</option>
@@ -18,7 +18,7 @@
           <option value="banana">Banana</option>
         </select>
       </f7-list-item>
-      <f7-list-item smart-select title="Car" smart-select-back-text="返回">
+      <f7-list-item smart-select title="Car" smart-select-back-text="Back">
         <select name="car" multiple="multiple">
           <optgroup label="Japanese">
             <option value="honda" selected>Honda</option>
@@ -42,7 +42,7 @@
           </optgroup>
         </select>
       </f7-list-item>
-      <f7-list-item smart-select smart-select-back-on-select title="Mac or Windows" smart-select-back-text="返回">
+      <f7-list-item smart-select smart-select-back-on-select title="Mac or Windows" smart-select-back-text="Back">
         <select name="mac-windows">
           <option value="mac">Mac</option>
           <option value="windows">Windows</option>

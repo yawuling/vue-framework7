@@ -31,10 +31,10 @@ export default {
   },
   methods: {
     closeLogin: function () {
-      let _this = this
+      let self = this
       let loginText = 'Username:' + this.username + ',password:' + this.password
       this.$f7.alert(loginText, 'Framework7', function () {
-        _this.$router.back()
+        self.$router.back()
       })
     }
   }
