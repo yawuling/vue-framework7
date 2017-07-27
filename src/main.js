@@ -41,7 +41,7 @@ new Vue({
     animateNavBackIcon: true,
     /* Uncomment to enable Material theme: */
     // material: true,
-    routes: Routes,
+    routes: Routes
   },
   // Register App Component
   components: {

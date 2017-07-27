@@ -11,10 +11,11 @@
       </p>
     </f7-block>
     <f7-list>
-      <f7-list-item v-for="item in items"
+      <f7-list-item v-for="(item, index) in items"
         :link="item.link"
         media="<i class='icon icon-f7'></i>"
         :title="item.title"
+        :key="index"
       ></f7-list-item>
     </f7-list>
   </f7-page>

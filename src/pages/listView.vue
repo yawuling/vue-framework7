@@ -73,9 +73,9 @@
     </f7-list>
     <f7-block-title>GROUPED WITH STICKY TITLES</f7-block-title>
     <f7-list>
-      <f7-list-group v-for="(group, key) in groups">
+      <f7-list-group v-for="(group, key) in groups" :key="key">
         <f7-list-item :title="key" group-title></f7-list-item>
-        <f7-list-item v-for="item in group" :title="item"></f7-list-item>
+        <f7-list-item v-for="(item, index) in group" :title="item" :key="index"></f7-list-item>
       </f7-list-group>
     </f7-list>
     <f7-block-title>MIXED AND NESTED</f7-block-title>

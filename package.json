@@ -1,6 +1,6 @@
 {
   "name": "vue-framework7",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Framework7 Vue + Webpack starter app template",
   "scripts": {
     "dev": "node build/dev-server.js",
@@ -21,7 +21,7 @@
     "app",
     "f7"
   ],
-  "author": "Vladimir Kharlampidi",
+  "author": "yawuling",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yawuling/vue-framework7/issues"

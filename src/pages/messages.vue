@@ -6,7 +6,7 @@
       </f7-nav-right>
     </f7-navbar>
     <f7-messages>
-      <f7-message v-for="message in messages"
+      <f7-message v-for="(message, index) in messages"
         :text="message.text"
         :label="message.label"
         :date="message.date"
@@ -15,6 +15,7 @@
         :type="message.type"
         :day="message.day"
         :time="message.time"
+        :key="index"
       >
         <img v-if="message.img" :src="message.img" />
       </f7-message>

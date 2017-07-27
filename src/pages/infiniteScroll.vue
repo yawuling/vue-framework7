@@ -7,7 +7,7 @@
     </f7-navbar>
     <f7-block-title>SCROLL BOTTOM</f7-block-title>
     <f7-list>
-      <f7-list-item v-for="item in items" :title="'Item ' + item"></f7-list-item>
+      <f7-list-item v-for="(item, index) in items" :title="'Item ' + item" :key="index"></f7-list-item>
     </f7-list>
   </f7-page>
 </template>

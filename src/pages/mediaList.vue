@@ -8,24 +8,26 @@
     <f7-block>Media Lists are almost the same as Data Lists, but with a more flexible layout for visualization of more complex data, like products, services, userc, etc. You can even use them in <f7-link open-popover>popovers</f7-link></f7-block>
     <f7-block-title>SONGS</f7-block-title>
     <f7-list media-list>
-      <f7-list-item v-for="item in songs"
+      <f7-list-item v-for="(item, index) in songs"
         :link="item.link"
         :media="item.media"
         :title="item.title"
         :subtitle="item.subtitle"
         :text="item.text"
         :after="item.after"
+        :key="index"
       ></f7-list-item>
     </f7-list>
     <f7-block-title>Mail App (With Swipe to delete and overswipes)</f7-block-title>
     <f7-list media-list>
-      <f7-list-item v-for="item in swipes"
+      <f7-list-item v-for="(item, index) in swipes"
         swipeout
         :link="item.link"
         :title="item.title"
         :subtitle="item.subtitle"
         :text="item.text"
-        :after="item.after">
+        :after="item.after"
+        :key="index">
         <f7-swipeout-actions left>
           <f7-swipeout-button reply color="green">Reply</f7-swipeout-button>
           <f7-swipeout-button forward color="blue">Forward</f7-swipeout-button>
@@ -39,30 +41,33 @@
     </f7-list>
     <f7-block>SOMETHING MORE SIMPLE</f7-block>
     <f7-list media-list>
-      <f7-list-item v-for="item in simples"
+      <f7-list-item v-for="(item, index) in simples"
         :link="item.link"
         :media="item.media"
         :title="item.title"
         :subtitle="item.subtitle"
+        :key="index"
       ></f7-list-item>
     </f7-list>
     <f7-block-title>INSET</f7-block-title>
     <f7-list media-list inset>
-      <f7-list-item v-for="item in insets"
+      <f7-list-item v-for="(item, index) in insets"
         :link="item.link"
         :media="item.media"
         :title="item.title"
         :subtitle="item.subtitle"
+        :key="index"
       ></f7-list-item>
     </f7-list>
 
     <f7-popover>
       <f7-list media-list>
-        <f7-list-item v-for="item in popovers"
+        <f7-list-item v-for="(item, index) in popovers"
           :link="item.link"
           :media="item.media"
           :title="item.title"
           :subtitle="item.subtitle"
+          :key="index"
         ></f7-list-item>
       </f7-list>
     </f7-popover>

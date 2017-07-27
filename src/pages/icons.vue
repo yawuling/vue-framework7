@@ -15,7 +15,7 @@
     <f7-block-title>IOS ICONS SET (256)</f7-block-title>
     <f7-block inner>
       <f7-grid>
-        <f7-col width="33" tablet="15" class="ks-demo-icon" v-for="icon in icons">
+        <f7-col width="33" tablet="15" class="ks-demo-icon" v-for="(icon, index) in icons" :key="index">
           <div class="icon">
             <f7-icon :f7="icon"></f7-icon>
           </div>

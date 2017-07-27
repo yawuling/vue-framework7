@@ -6,12 +6,14 @@
       </f7-nav-right>
     </f7-navbar>
     <f7-list>
-      <f7-list-item v-for="item in items"
+      <f7-list-item v-for="(item, index) in items"
+        link-ignore-cache
         :link="item.link"
         media="<i class='icon icon-f7'></i>"
         :title="item.title"
         :badge="item.badge"
         :badge-color="item.badgeColor"
+        :key="index"
       ></f7-list-item>
     </f7-list>
   </f7-page>
