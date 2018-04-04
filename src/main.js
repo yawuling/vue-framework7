@@ -39,6 +39,13 @@ new Vue({
     root: '#app',
     dynamicNavbar: true,
     animateNavBackIcon: true,
+    /**
+     * the page should be saved in router history:
+     * pushState: true,
+     * pushStateSeparator: '',
+     * 
+     * the default of pushStateSeparator is '#!/'
+     */
     /* Uncomment to enable Material theme: */
     // material: true,
     routes: Routes
