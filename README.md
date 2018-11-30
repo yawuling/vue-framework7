@@ -1,6 +1,6 @@
 # 使用Framework7-Vue重构的Framework7官网 Demo
 
-Framwork7-Vue 将 Framework7 和 Vue 结合起来，但官方文档有些地方描述的不清楚，而且在实际开发中也可能会遇到各种各样的问题，所以我就使用Framework7-Vue 重构了官网的 Demo，同时对重构过程中遇到的问题和解决方案写了几篇博客，博客地址：http://blog.ywulin.com/tags/framework7/
+Framwork7-Vue 将 Framework7 和 Vue 结合起来，但官方文档有些地方描述的不清楚，而且在实际开发中也可能会遇到各种各样的问题，所以我就使用Framework7-Vue 重构了官网的 Demo，同时对重构过程中遇到的问题和解决方案写了几篇博客，博客地址：https://yawuling.com/tags/framework7/
 
 ## 运行程序
 
